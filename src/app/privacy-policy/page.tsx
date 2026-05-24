@@ -133,7 +133,7 @@ export default function Page() {
             use this information only to review and respond to your message.
           </p>
           <p className="mt-3 leading-7">
-            Contact form submissions are processed and forwarded by FormSubmit. Please do not include sensitive medical
+            Contact form submissions are processed and forwarded by Netlify Forms. Please do not include sensitive medical
             information in contact messages.
           </p>
           <p className="mt-3 leading-7">
