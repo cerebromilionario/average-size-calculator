@@ -107,13 +107,22 @@ export default function Page() {
         <section>
           <h2 className="text-2xl font-semibold text-slate-900">Cookies</h2>
           <p className="mt-3 leading-7">
-            We may use essential cookies or similar local storage technologies to remember basic preferences, such as
-            whether you have accepted the cookie notice.
+            We use necessary cookies and local storage to remember your cookie choices and keep core site
+            functionality working.
           </p>
-          <p className="mt-3 leading-7">We do not use cookies to store calculator measurements.</p>
           <p className="mt-3 leading-7">
-            The calculator runs in your browser, and cookie consent is used only to remember your banner preference,
-            unless analytics or similar tools are added in the future.
+            Optional categories are available through our cookie settings panel: Preferences, Analytics, and
+            Marketing.
+          </p>
+          <p className="mt-3 leading-7">
+            Analytics and Marketing are not currently used unless we add those services in the future and update this
+            policy.
+          </p>
+          <p className="mt-3 leading-7">
+            Calculator measurements are not stored in cookies or local storage.
+          </p>
+          <p className="mt-3 leading-7">
+            You can change your cookie choices any time through <span className="font-medium text-slate-900">Cookie settings</span> in the footer.
           </p>
         </section>
 
