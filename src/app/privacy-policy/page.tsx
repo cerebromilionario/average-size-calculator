@@ -116,8 +116,12 @@ export default function Page() {
         <section>
           <h2 className="text-2xl font-semibold text-slate-900">Contact information</h2>
           <p className="mt-3 leading-7">
-            If you contact us, you may voluntarily provide contact details such as your name or email address. We use
-            this information only to respond to your message.
+            If you contact us, you may voluntarily provide your name, email address, subject, and message content. We
+            use this information only to review and respond to your message.
+          </p>
+          <p className="mt-3 leading-7">
+            Contact form submissions are processed and forwarded by FormSubmit. Please do not include sensitive medical
+            information in contact messages.
           </p>
           <p className="mt-3 leading-7">
             We do not sell your contact information or share it for marketing without your consent. You can reach us on
