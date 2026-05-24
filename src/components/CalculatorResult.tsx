@@ -28,7 +28,7 @@ export default function CalculatorResult({ result, country }: { result: Calculat
   const direction = result.diffGlobalCm >= 0 ? 'above' : 'below';
 
   return (
-    <section className="mt-6 rounded-2xl border border-brand-200 bg-brand-50 p-5" aria-live="polite">
+    <section className="mt-6 rounded-2xl border border-indigo-200 bg-gradient-to-br from-indigo-50 to-sky-50 p-6 shadow-sm" aria-live="polite">
       <h3 className="text-xl font-semibold text-slate-900">Your result</h3>
       <ul className="mt-3 space-y-2 text-sm text-slate-800">
         <li><strong>Measurement entered:</strong> {format(result.valueCm)} cm ({format(result.valueIn)} in)</li>

@@ -101,20 +101,20 @@ export default function PenisSizeCalculator() {
   }, [error, measureType, country, valueCm]);
 
   return (
-    <div id="calculator" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+    <div id="calculator" className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-slate-200/60 md:p-8">
       <h2 className="text-2xl font-semibold text-slate-900">Start your private comparison</h2>
-      <p className="mt-2 text-sm text-slate-600">For adults only. Your input is calculated on your device and is not stored or sent to a server.</p>
+      <p className="mt-2 text-sm text-slate-600">For adults only. Your input is calculated on your device and is not stored or sent to a server.</p><div className="mt-4 flex flex-wrap gap-2 text-xs"><span className="rounded-full bg-emerald-50 px-3 py-1 font-medium text-emerald-700">Private</span><span className="rounded-full bg-sky-50 px-3 py-1 font-medium text-sky-700">Browser-based</span><span className="rounded-full bg-indigo-50 px-3 py-1 font-medium text-indigo-700">Educational</span></div>
 
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         <div className="space-y-2 md:col-span-2">
           <label htmlFor="measurement-value" className="text-sm font-medium text-slate-800">Measurement value</label>
-          <input id="measurement-value" inputMode="decimal" className="w-full rounded-lg border border-slate-300 px-4 py-3 text-base" type="number" min="0" step="0.01" value={value} onChange={(e) => setValue(e.target.value)} aria-invalid={Boolean(error)} aria-describedby="measurement-help calculation-error" />
+          <input id="measurement-value" inputMode="decimal" className="input-modern" type="number" min="0" step="0.01" value={value} onChange={(e) => setValue(e.target.value)} aria-invalid={Boolean(error)} aria-describedby="measurement-help calculation-error" />
           <p id="measurement-help" className="text-xs text-slate-500">Enter your measured value. Decimals are accepted.</p>
         </div>
 
         <div className="space-y-2">
           <label htmlFor="measurement-unit" className="text-sm font-medium text-slate-800">Unit</label>
-          <select id="measurement-unit" className="w-full rounded-lg border border-slate-300 px-4 py-3 text-base" value={unit} onChange={(e) => setUnit(e.target.value as 'cm' | 'in')}>
+          <select id="measurement-unit" className="input-modern" value={unit} onChange={(e) => setUnit(e.target.value as 'cm' | 'in')}>
             <option value="cm">Centimeters (cm)</option>
             <option value="in">Inches (in)</option>
           </select>
@@ -122,7 +122,7 @@ export default function PenisSizeCalculator() {
 
         <div className="space-y-2">
           <label htmlFor="measure-type" className="text-sm font-medium text-slate-800">Measurement type</label>
-          <select id="measure-type" className="w-full rounded-lg border border-slate-300 px-4 py-3 text-base" value={measureType} onChange={(e) => setMeasureType(e.target.value as MeasureType)}>
+          <select id="measure-type" className="input-modern" value={measureType} onChange={(e) => setMeasureType(e.target.value as MeasureType)}>
             <option value="erectLength">Erect length — global + country comparison</option>
             <option value="erectGirth">Erect girth — global average only</option>
             <option value="flaccidLength">Flaccid length — global average only</option>
@@ -132,14 +132,14 @@ export default function PenisSizeCalculator() {
 
         <div className="space-y-2 md:col-span-2">
           <label htmlFor="country" className="text-sm font-medium text-slate-800">Country</label>
-          <select id="country" className="w-full rounded-lg border border-slate-300 px-4 py-3 text-base" value={country} onChange={(e) => setCountry(e.target.value)}>
+          <select id="country" className="input-modern" value={country} onChange={(e) => setCountry(e.target.value)}>
             {COUNTRY_AVERAGES_CM.map((item) => <option key={item.country} value={item.country}>{item.country}</option>)}
           </select>
         </div>
       </div>
 
       {error ? (
-        <p id="calculation-error" role="alert" className="mt-4 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">{error}</p>
+        <p id="calculation-error" role="alert" className="mt-4 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900">{error}</p>
       ) : null}
 
       {result ? <CalculatorResult result={result} country={country} /> : null}
