@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { siteConfig } from '@/lib/site';
 
 const contactUrl = `${siteConfig.siteUrl}/contact`;
-const thankYouUrl = `${siteConfig.siteUrl}/thank-you`;
 
 export const metadata: Metadata = {
   title: 'Contact | Average Size Calculator',
@@ -43,11 +42,20 @@ export default function Page() {
 
       <section className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
         <h2 className="text-xl font-semibold text-slate-900">Send a message</h2>
-        <form action="https://formsubmit.co/Willianzacarias77@gmail.com" method="POST" className="mt-5 space-y-5">
-          <input type="hidden" name="_subject" value="New message from Average Size Calculator" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="true" />
-          <input type="hidden" name="_next" value={thankYouUrl} />
+        <form
+          name="contact"
+          method="POST"
+          action="/thank-you"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className="mt-5 space-y-5"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p className="hidden">
+            <label>
+              Do not fill this field if you are human: <input name="bot-field" />
+            </label>
+          </p>
 
           <div>
             <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-800">
@@ -113,7 +121,7 @@ export default function Page() {
         </form>
 
         <p className="mt-5 text-sm leading-6 text-slate-600">
-          Do not include sensitive medical information in this form. Messages are sent by email through FormSubmit.
+          Do not include sensitive medical information in this form. Messages are processed via Netlify Forms.
           For details, read our{' '}
           <Link href="/privacy-policy" className="font-medium text-slate-800 underline">
             Privacy Policy
