@@ -1,32 +1,62 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import DataQualityNotice from '@/components/DataQualityNotice';
 import { COUNTRY_AVERAGES_CM } from '@/data/penisSizeAverages';
 
 export const metadata: Metadata = {
-  title: 'Average Penis Size by Country',
+  title: 'Average Penis Size by Country | Country Comparison Data',
   description:
-    'Average penis size by country with source and confidence labels, plus context on global average penis size and country reference data limits.'
+    'Compare average penis size by country using compiled reference data. Learn how country averages differ from global peer-reviewed averages and how to interpret them.'
 };
 
 export default function Page() {
+  const faqItems = [
+    {
+      q: 'Are average penis size by country rankings accurate?',
+      a: 'They are approximate compiled reference data, not definitive national clinical values. Method quality and sampling can vary.'
+    },
+    {
+      q: 'Why do country averages vary by source?',
+      a: 'Different sources may combine different studies, sample sizes, time periods, and measurement methods, which can produce different values.'
+    },
+    {
+      q: 'Is the global average more reliable than country data?',
+      a: 'In general, yes. A peer-reviewed global systematic review is usually more consistent for broad comparison than compiled country rankings.'
+    },
+    {
+      q: 'Can I compare my measurement with my country average?',
+      a: 'Yes, as a broad educational reference. Small differences should not be overinterpreted as clinically meaningful.'
+    }
+  ];
+
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      { '@type': 'Question', name: 'Are country penis size averages accurate?', acceptedAnswer: { '@type': 'Answer', text: 'Country averages are approximate educational references and can vary by source quality and methodology.' } },
-      { '@type': 'Question', name: 'Why do country averages vary by source?', acceptedAnswer: { '@type': 'Answer', text: 'Country rankings can compile mixed studies and surveys that use different samples and measurement methods.' } },
-      { '@type': 'Question', name: 'Which average is more reliable, global or country data?', acceptedAnswer: { '@type': 'Answer', text: 'Global pooled references from standardized measured studies are usually more reliable for broad comparison.' } },
-      { '@type': 'Question', name: 'Can I compare my size by country?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, but country comparison should be treated as secondary educational context, not diagnosis.' } }
-    ]
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a }
+    }))
   };
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       <h1 className="text-3xl font-bold">Average Penis Size by Country</h1>
-      <p className="text-slate-700">This country average penis size table provides educational country reference data. It supports penis size comparison by country while keeping global average penis size as the main benchmark.</p>
-      <p className="text-slate-700">Explore your own context in the <a className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</a> and read the broader baseline on <a className="text-brand-700 underline" href="/average-penis-size">average penis size</a>.</p>
+      <p className="text-slate-700">This page presents average penis size by country as compiled reference data for educational context. It is a country average penis size overview, not a competitive ranking, and the global average penis size remains the primary benchmark.</p>
+      <p className="text-slate-700">For personal context, use the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link>. You can also review the global baseline on <Link className="text-brand-700 underline" href="/average-penis-size">average penis size</Link> and improve consistency with <Link className="text-brand-700 underline" href="/how-to-measure">how to measure</Link>.</p>
+
+      <DataQualityNotice />
+
       <div className="overflow-auto card">
         <table className="w-full text-left text-sm">
-          <thead><tr><th>Country</th><th>Average erect length</th><th>Source</th><th>Confidence</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Country (A-Z)</th>
+              <th>Average erect length</th>
+              <th>Source</th>
+              <th>Confidence</th>
+            </tr>
+          </thead>
           <tbody>
             {COUNTRY_AVERAGES_CM.map((row) => (
               <tr key={row.country} className="border-t">
@@ -41,11 +71,23 @@ export default function Page() {
       </div>
 
       <section className="space-y-2">
-        <h2 className="text-2xl font-semibold text-slate-900">How reliable are country averages?</h2>
-        <p className="text-slate-700">Country averages can vary by source. Some rankings use compilations or surveys, while professionally measured studies are generally more reliable.</p>
-        <p className="text-slate-700">Small country-to-country differences should not be interpreted as definitive. The goal is educational comparison, not diagnosis.</p>
-        <p className="text-sm text-slate-600">Educational disclaimer: country reference data may use mixed methodologies and should not be treated as a clinical standard.</p>
+        <h2 className="text-2xl font-semibold text-slate-900">Methodology and limitations</h2>
+        <p className="text-slate-700">Global averages come from a peer-reviewed systematic review. Country averages come from a compiled public country ranking.</p>
+        <p className="text-slate-700">Country data may combine different sources or measurement methods. This penis size comparison by country is useful for broad reference only.</p>
+        <p className="text-slate-700">Small differences between countries should not be overinterpreted. This site is educational and not medical advice.</p>
       </section>
+
+      <section className="space-y-2">
+        <h2 className="text-2xl font-semibold text-slate-900">FAQ</h2>
+        {faqItems.map((item) => (
+          <div key={item.q}>
+            <h3 className="font-semibold text-slate-900">{item.q}</h3>
+            <p className="text-slate-700">{item.a}</p>
+          </div>
+        ))}
+      </section>
+
+      <p className="text-sm text-slate-600">Educational disclaimer: compiled reference data can vary by source methodology and should not be treated as a clinical diagnosis or performance metric.</p>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </div>

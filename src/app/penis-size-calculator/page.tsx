@@ -3,6 +3,7 @@ import PenisSizeCalculator from '@/components/PenisSizeCalculator';
 import AverageReferenceTable from '@/components/AverageReferenceTable';
 import EducationalDisclaimer from '@/components/EducationalDisclaimer';
 import CalculatorFaq, { getFaqJsonLd } from '@/components/CalculatorFaq';
+import DataQualityNotice from '@/components/DataQualityNotice';
 import { siteConfig } from '@/lib/site';
 
 const pageUrl = `${siteConfig.siteUrl}/penis-size-calculator`;
@@ -36,6 +37,8 @@ export default function CalculatorPage() {
       </section>
 
       <PenisSizeCalculator />
+
+      <DataQualityNotice />
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">How to use the penis size calculator</h2>
