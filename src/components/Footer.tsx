@@ -8,6 +8,7 @@ const footerLinks = [
   { href: '/average-penis-size-by-country', label: 'Average Size by Country' },
   { href: '/how-to-measure', label: 'How to Measure' },
   { href: '/privacy-policy', label: 'Privacy Policy' },
+  { href: '/terms-of-use', label: 'Terms of Use' },
   { href: '/contact', label: 'Contact' }
 ];
 
