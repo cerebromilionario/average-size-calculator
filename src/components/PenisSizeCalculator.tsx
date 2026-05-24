@@ -89,7 +89,9 @@ export default function PenisSizeCalculator() {
       diffCountryCm,
       countryAverageCm: countryAverage,
       countryAverageIn: typeof countryAverage === 'number' ? cmToIn(countryAverage) : null,
-      estimatedPercentile
+      estimatedPercentile,
+      countrySourceLabel: countryData?.sourceLabel ?? null,
+      countryConfidence: countryData?.confidence ?? null
     };
   }, [error, measureType, country, valueCm]);
 
