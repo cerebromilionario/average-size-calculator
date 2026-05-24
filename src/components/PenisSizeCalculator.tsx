@@ -72,9 +72,12 @@ export default function PenisSizeCalculator() {
     const global = GLOBAL_AVERAGES_CM[measureType];
     const countryData = COUNTRY_AVERAGES_CM.find((item) => item.country === country);
     const hasCountryComparison = measureType === 'erectLength';
-    const countryAverage = hasCountryComparison ? countryData?.[measureType] : null;
+    const countryAverage =
+      hasCountryComparison && typeof countryData?.[measureType] === 'number'
+        ? countryData[measureType]
+        : undefined;
     const diffGlobalCm = valueCm - global;
-    const diffCountryCm = typeof countryAverage === 'number' ? valueCm - countryAverage : null;
+    const diffCountryCm = typeof countryAverage === 'number' ? valueCm - countryAverage : undefined;
 
     const std = measurementStdDevCm[measureType];
     const z = (valueCm - global) / std;
@@ -89,11 +92,11 @@ export default function PenisSizeCalculator() {
       diffGlobalCm,
       diffCountryCm,
       countryAverageCm: countryAverage,
-      countryAverageIn: typeof countryAverage === 'number' ? cmToIn(countryAverage) : null,
+      countryAverageIn: typeof countryAverage === 'number' ? cmToIn(countryAverage) : undefined,
       estimatedPercentile,
       hasCountryComparison,
-      countrySourceLabel: countryData?.sourceLabel ?? null,
-      countryConfidence: countryData?.confidence ?? null
+      countrySourceLabel: countryData?.sourceLabel,
+      countryConfidence: countryData?.confidence
     };
   }, [error, measureType, country, valueCm]);
 

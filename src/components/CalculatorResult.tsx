@@ -5,13 +5,13 @@ type CalculatorResultData = {
   globalAverageCm: number;
   globalAverageIn: number;
   diffGlobalCm: number;
-  diffCountryCm: number | null;
+  diffCountryCm?: number;
   countryAverageCm?: number;
-  countryAverageIn: number | null;
+  countryAverageIn?: number;
   estimatedPercentile: number;
   hasCountryComparison: boolean;
-  countrySourceLabel: string | null;
-  countryConfidence: 'higher' | 'medium' | 'lower' | null;
+  countrySourceLabel?: string;
+  countryConfidence?: 'higher' | 'medium' | 'lower';
 };
 
 function format(n: number) {
