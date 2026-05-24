@@ -46,6 +46,9 @@ export default function Page() {
       <p className="text-slate-700">For personal context, use the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link>. You can also review the global baseline on <Link className="text-brand-700 underline" href="/average-penis-size">average penis size</Link> and improve consistency with <Link className="text-brand-700 underline" href="/how-to-measure">how to measure</Link>.</p>
 
       <DataQualityNotice />
+      <p className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+        This country table currently compares average erect length only. Country-level data for erect girth and flaccid length is not available in this dataset.
+      </p>
 
       <div className="overflow-auto card">
         <table className="w-full text-left text-sm">

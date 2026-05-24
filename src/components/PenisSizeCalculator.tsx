@@ -71,7 +71,8 @@ export default function PenisSizeCalculator() {
     if (error) return null;
     const global = GLOBAL_AVERAGES_CM[measureType];
     const countryData = COUNTRY_AVERAGES_CM.find((item) => item.country === country);
-    const countryAverage = countryData?.[measureType];
+    const hasCountryComparison = measureType === 'erectLength';
+    const countryAverage = hasCountryComparison ? countryData?.[measureType] : null;
     const diffGlobalCm = valueCm - global;
     const diffCountryCm = typeof countryAverage === 'number' ? valueCm - countryAverage : null;
 
@@ -90,6 +91,7 @@ export default function PenisSizeCalculator() {
       countryAverageCm: countryAverage,
       countryAverageIn: typeof countryAverage === 'number' ? cmToIn(countryAverage) : null,
       estimatedPercentile,
+      hasCountryComparison,
       countrySourceLabel: countryData?.sourceLabel ?? null,
       countryConfidence: countryData?.confidence ?? null
     };
@@ -118,10 +120,11 @@ export default function PenisSizeCalculator() {
         <div className="space-y-2">
           <label htmlFor="measure-type" className="text-sm font-medium text-slate-800">Measurement type</label>
           <select id="measure-type" className="w-full rounded-lg border border-slate-300 px-4 py-3 text-base" value={measureType} onChange={(e) => setMeasureType(e.target.value as MeasureType)}>
-            <option value="erectLength">Erect length</option>
-            <option value="erectGirth">Erect girth</option>
-            <option value="flaccidLength">Flaccid length</option>
+            <option value="erectLength">Erect length — global + country comparison</option>
+            <option value="erectGirth">Erect girth — global average only</option>
+            <option value="flaccidLength">Flaccid length — global average only</option>
           </select>
+          <p className="text-xs text-slate-500">Country comparison is currently available for erect length only. Girth and flaccid length use global averages.</p>
         </div>
 
         <div className="space-y-2 md:col-span-2">
