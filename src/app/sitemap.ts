@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
+import { siteConfig } from '@/lib/site';
 
 function getBaseUrl() {
-  return process.env.NEXT_PUBLIC_SITE_URL || process.env.URL || 'https://example.com';
+  return process.env.NEXT_PUBLIC_SITE_URL || siteConfig.siteUrl;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
