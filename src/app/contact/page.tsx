@@ -46,14 +46,13 @@ export default function Page() {
           name="contact"
           method="POST"
           action="/thank-you"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
           className="mt-5 space-y-5"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <p className="hidden">
+          <p className="hidden" aria-hidden="true">
             <label>
-              Do not fill this field if you are human: <input name="bot-field" />
+              Do not fill this out if you are human:
+              <input name="bot-field" tabIndex={-1} autoComplete="off" />
             </label>
           </p>
 
