@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
 import { siteConfig } from '@/lib/site';
 import './globals.css';
 
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main className="container-page">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
