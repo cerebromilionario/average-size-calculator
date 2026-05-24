@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site';
+import CookieSettingsButton from '@/components/CookieSettingsButton';
 
 const footerLinks = [
   { href: '/', label: 'Home' },
@@ -30,6 +31,7 @@ export default function Footer() {
                 {link.label}
               </Link>
             ))}
+            <CookieSettingsButton />
           </nav>
         </div>
         <p className="mt-8 text-xs text-slate-500">
