@@ -9,6 +9,8 @@ type CalculatorResultData = {
   countryAverageCm?: number;
   countryAverageIn: number | null;
   estimatedPercentile: number;
+  countrySourceLabel: string | null;
+  countryConfidence: 'higher' | 'medium' | 'lower' | null;
 };
 
 function format(n: number) {
@@ -39,8 +41,10 @@ export default function CalculatorResult({ result, country }: { result: Calculat
             <li><strong>Difference from {country} average:</strong> {format(Math.abs(result.diffCountryCm ?? 0))} cm ({format(Math.abs((result.diffCountryCm ?? 0) / 2.54))} in) {(result.diffCountryCm ?? 0) >= 0 ? 'above' : 'below'}</li>
           </>
         ) : (
-          <li><strong>{country} average:</strong> Country data is not currently available for this measurement type.</li>
+          <li><strong>{country} average:</strong> Country-level data is not available for this measurement type.</li>
         )}
+        {result.countrySourceLabel ? <li><strong>Country reference source:</strong> {result.countrySourceLabel}</li> : null}
+        {result.countryConfidence === 'lower' ? <li>Country comparisons use compiled reference data and may be less reliable than global averages.</li> : null}
       </ul>
       <p className="mt-4 text-sm text-slate-700">Your measurement is {format(Math.abs(result.diffGlobalCm))} cm {direction} the global average for {result.measurementLabel.toLowerCase()}. This result is within a common adult range. Natural variation is normal. Averages are reference points, not medical standards.</p>
       <p className="mt-2 text-xs text-slate-600">Percentile is an estimate based on average and distribution assumptions. It should be interpreted as educational, not diagnostic.</p>

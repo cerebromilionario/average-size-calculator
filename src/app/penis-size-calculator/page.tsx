@@ -66,7 +66,7 @@ export default function CalculatorPage() {
 
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold text-slate-900">Compare with average penis size by country</h2>
-        <p className="text-slate-700">Country comparison is an additional reference layer and may help users understand broader variation patterns. However, country-level datasets often vary in quality and measurement protocol. In many cases, global references derived from standardized studies are more stable for broad educational comparison.</p>
+        <p className="text-slate-700">Country comparison is a secondary reference layer. The global comparison is the primary benchmark. Country entries may only include erect length, so erect girth or flaccid length comparisons may be unavailable for some countries. When available, the result also shows the country reference source.</p>
         <p className="text-slate-700">You can switch country directly in the calculator to view available comparisons. For a wider overview, visit <a className="text-brand-700 underline" href="/average-penis-size-by-country">See average penis size by country</a>.</p>
       </section>
 
