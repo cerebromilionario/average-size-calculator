@@ -61,7 +61,7 @@ export default function CalculatorPage() {
         <p className="text-slate-700">Small differences are common and may have little practical meaning. Measurement technique, timing, and unit conversion can all change outcomes. Natural variation across adults is normal, and this tool is designed to provide private educational context rather than judgment.</p>
       </section>
 
-      <StrategicAd type="rectangle" />
+      <StrategicAd type="native" />
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">Global average penis size used by this calculator</h2>
@@ -89,6 +89,9 @@ export default function CalculatorPage() {
       </section>
 
       <EducationalDisclaimer />
+
+      <StrategicAd type="rectangle" />
+
       <CalculatorFaq />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
