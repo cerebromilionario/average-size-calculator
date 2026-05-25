@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { siteConfig } from '@/lib/site';
 import StrategicAd from '@/components/ads/StrategicAd';
 
 export const metadata: Metadata = {
@@ -33,18 +32,8 @@ const faqItems = [
 ];
 
 export default function HomePage() {
-  const websiteJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: siteConfig.name,
-    url: siteConfig.siteUrl,
-    description: 'A private educational size comparison tool.'
-  };
-
   return (
     <div className="space-y-12 pb-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
-
       <section className="card space-y-5">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Average Size Calculator</h1>
         <p className="max-w-3xl text-lg text-slate-700">

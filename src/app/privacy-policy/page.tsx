@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import JsonLd from '@/components/JsonLd';
+import { createWebPageJsonLd } from '@/lib/jsonLd';
 
 const effectiveDate = 'May 25, 2026';
-const privacyPolicyUrl = 'https://averagesizecalculator.com/privacy-policy';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Average Size Calculator',
@@ -10,24 +11,18 @@ export const metadata: Metadata = {
     'Read the Average Size Calculator privacy policy. Learn how private calculations work, what data is not stored, and how this educational tool protects user privacy.'
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  headline: 'Privacy Policy',
+const jsonLd = createWebPageJsonLd({
+  name: 'Privacy Policy',
   description:
     'Privacy policy for Average Size Calculator explaining local browser-based calculations and limited technical processing.',
-  publisher: {
-    '@type': 'Organization',
-    name: 'Average Size Calculator'
-  },
-  mainEntityOfPage: privacyPolicyUrl,
-  url: privacyPolicyUrl
-};
+  path: '/privacy-policy'
+});
+
 
 export default function Page() {
   return (
     <article className="mx-auto w-full max-w-3xl py-8 sm:py-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
 
       <header className="mb-8 border-b border-slate-200 pb-6 sm:mb-10">
         <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Privacy Policy</h1>

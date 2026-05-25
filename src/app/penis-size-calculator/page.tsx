@@ -6,6 +6,8 @@ import CalculatorFaq, { getFaqJsonLd } from '@/components/CalculatorFaq';
 import DataQualityNotice from '@/components/DataQualityNotice';
 import { siteConfig } from '@/lib/site';
 import StrategicAd from '@/components/ads/StrategicAd';
+import JsonLd from '@/components/JsonLd';
+import { createFaqJsonLd, createWebApplicationJsonLd } from '@/lib/jsonLd';
 
 const pageUrl = `${siteConfig.siteUrl}/penis-size-calculator`;
 
@@ -94,8 +96,8 @@ export default function CalculatorPage() {
 
       <CalculatorFaq />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
+      <JsonLd data={appJsonLd} />
     </div>
   );
 }

@@ -3,8 +3,9 @@
 import { usePathname } from 'next/navigation';
 import { createBreadcrumbJsonLd, createWebPageJsonLd } from '@/lib/jsonLd';
 import { siteConfig } from '@/lib/site';
+import JsonLd from '@/components/JsonLd';
 
-const EXCLUDED_BREADCRUMB = new Set(['/privacy-policy', '/terms-of-use', '/contact', '/thank-you']);
+const EXCLUDED_BREADCRUMB = new Set(['/thank-you']);
 
 const toTitle = (path: string) =>
   path
@@ -35,10 +36,8 @@ export default function StructuredData() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPage) }} />
-      {breadcrumb ? (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      ) : null}
+      <JsonLd data={webPage} />
+      {breadcrumb ? <JsonLd data={breadcrumb} /> : null}
     </>
   );
 }

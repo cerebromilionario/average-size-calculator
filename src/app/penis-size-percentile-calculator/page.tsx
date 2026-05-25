@@ -4,6 +4,8 @@ import PercentileEstimator from '@/components/PercentileEstimator';
 import EducationalDisclaimer from '@/components/EducationalDisclaimer';
 import { siteConfig } from '@/lib/site';
 import StrategicAd from '@/components/ads/StrategicAd';
+import JsonLd from '@/components/JsonLd';
+import { createFaqJsonLd, createWebApplicationJsonLd, createArticleJsonLd } from '@/lib/jsonLd';
 
 const pageUrl = `${siteConfig.siteUrl}/penis-size-percentile-calculator`;
 
@@ -272,8 +274,8 @@ export default function PercentileCalculatorPage() {
       </section>
 
       <EducationalDisclaimer />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
+      <JsonLd data={webAppJsonLd} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
     </article>
   );
