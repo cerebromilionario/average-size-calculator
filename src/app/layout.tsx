@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import CookieConsent from '@/components/CookieConsent';
+import GlobalContentAds, { GlobalContentAdsEnd } from '@/components/ads/GlobalContentAds';
 import { siteConfig } from '@/lib/site';
 import './globals.css';
 
@@ -19,7 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <Header />
-        <main className="container-page">{children}</main>
+        <main className="container-page">
+          <GlobalContentAds />
+          {children}
+          <GlobalContentAdsEnd />
+        </main>
         <Footer />
         <CookieConsent />
       </body>
