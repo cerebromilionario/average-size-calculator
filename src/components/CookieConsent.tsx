@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-const CONSENT_STORAGE_KEY = 'average-size-cookie-consent-v1';
+import { CONSENT_STORAGE_KEY } from '@/lib/consent';
 
 type ConsentPreferences = {
   necessary: true;
@@ -42,6 +42,7 @@ export default function CookieConsent() {
     setOptionalPreferences(prefs);
     setShowBanner(false);
     setShowModal(false);
+    window.dispatchEvent(new Event('cookie-consent-updated'));
   };
 
   const handleAcceptAll = () => {
@@ -209,7 +210,7 @@ export default function CookieConsent() {
                   key: 'marketing',
                   label: 'Marketing',
                   description:
-                    'Used for advertising or personalized content if such services are added in the future. Currently disabled by default.'
+                    'Used to load third-party advertising scripts, such as Adsterra, when you choose to allow marketing cookies. Calculator measurements are not stored in advertising cookies by this site.'
                 }
               ].map((item) => (
                 <div key={item.key} className="rounded-lg border border-slate-200 p-3">

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import PercentileEstimator from '@/components/PercentileEstimator';
 import EducationalDisclaimer from '@/components/EducationalDisclaimer';
 import { siteConfig } from '@/lib/site';
+import StrategicAd from '@/components/ads/StrategicAd';
 
 const pageUrl = `${siteConfig.siteUrl}/penis-size-percentile-calculator`;
 
@@ -152,6 +153,8 @@ export default function PercentileCalculatorPage() {
 
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold text-slate-900">Average size vs percentile</h2>
+
+      <StrategicAd type="native" />
         <p className="text-slate-700">An average is a midpoint, but it does not describe the full spread of values. Percentile adds distribution context. It shows whether a measurement is close to the center, moderately away from it, or farther into the upper or lower tails.</p>
         <p className="text-slate-700">Two people can both be close to average but have different percentile estimates depending on how far their measurements are from the reference mean. This is why average and percentile are complementary: one gives a central number, and the other gives position within variation.</p>
         <p className="text-slate-700">If you want a broader background on reference means, see <Link className="text-brand-700 underline" href="/average-penis-size">Learn about average penis size</Link>.</p>

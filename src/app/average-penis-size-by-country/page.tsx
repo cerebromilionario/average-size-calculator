@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { COUNTRY_AVERAGES_CM, GLOBAL_AVERAGES_CM } from '@/data/penisSizeAverages';
+import StrategicAd from '@/components/ads/StrategicAd';
 
 export const metadata: Metadata = {
   title: 'Average Penis Size by Country | Country Comparison Data',
@@ -144,6 +145,8 @@ export default function Page() {
 
       <section className="card space-y-3">
         <h2 className="text-2xl font-semibold text-slate-900">Methodology and limitations</h2>
+
+      <StrategicAd type="native" />
         <p className="text-slate-700">
           Country-level datasets can involve variable methodology. Depending on the source, values may be derived from studies, surveys, aggregated reports, or mixed compilations. Because of that variation, confidence can differ across countries even when values are presented in a single table.
         </p>

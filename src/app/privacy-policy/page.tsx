@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const effectiveDate = 'May 24, 2026';
+const effectiveDate = 'May 25, 2026';
 const privacyPolicyUrl = 'https://averagesizecalculator.com/privacy-policy';
 
 export const metadata: Metadata = {
@@ -105,24 +105,25 @@ export default function Page() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-slate-900">Cookies</h2>
+          <h2 className="text-2xl font-semibold text-slate-900">Cookies and advertising</h2>
           <p className="mt-3 leading-7">
             We use necessary cookies and local storage to remember your cookie choices and keep core site
-            functionality working.
+            functionality working. Optional categories are available through our cookie settings panel: Preferences,
+            Analytics, and Marketing.
           </p>
           <p className="mt-3 leading-7">
-            Optional categories are available through our cookie settings panel: Preferences, Analytics, and
-            Marketing.
+            If you accept Marketing cookies, the site may load advertising scripts from third-party ad networks such as
+            Adsterra. These third parties may use cookies, identifiers, or similar technologies to display ads,
+            measure performance, and prevent abuse. Advertising scripts are not loaded unless Marketing consent is
+            enabled in Cookie settings.
           </p>
           <p className="mt-3 leading-7">
-            Analytics and Marketing are not currently used unless we add those services in the future and update this
-            policy.
+            Calculator measurements are not intentionally sent to advertising networks by Average Size Calculator. The
+            calculator is designed to run in your browser and not store your measurement input.
           </p>
           <p className="mt-3 leading-7">
-            Calculator measurements are not stored in cookies or local storage.
-          </p>
-          <p className="mt-3 leading-7">
-            You can change your cookie choices any time through <span className="font-medium text-slate-900">Cookie settings</span> in the footer.
+            You can change your choices at any time using <span className="font-medium text-slate-900">Cookie settings</span>
+            in the footer.
           </p>
         </section>
 
