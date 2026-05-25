@@ -35,7 +35,7 @@ export default function CalculatorResult({ result, country }: { result: Calculat
         <li><strong>Global average for {result.measurementLabel.toLowerCase()}:</strong> {format(result.globalAverageCm)} cm ({format(result.globalAverageIn)} in)</li>
         <li><strong>Difference from global average:</strong> {format(Math.abs(result.diffGlobalCm))} cm ({format(Math.abs(result.diffGlobalCm / 2.54))} in) {direction}</li>
         <li><strong>Classification:</strong> {classification}</li>
-        <li><strong>Estimated percentile:</strong> ~{result.estimatedPercentile}th percentile</li>
+        <li className="rounded-lg border border-brand-200 bg-white px-3 py-2"><strong>Estimated percentile:</strong> ~{result.estimatedPercentile}th percentile<br /><span className="text-xs text-slate-600">Percentile is an educational estimate based on global average data.</span></li>
         {result.hasCountryComparison && typeof result.countryAverageCm === 'number' ? (
           <>
             <li><strong>{country} average:</strong> {format(result.countryAverageCm)} cm ({format(result.countryAverageIn ?? 0)} in)</li>
@@ -50,7 +50,7 @@ export default function CalculatorResult({ result, country }: { result: Calculat
         {result.countryConfidence === 'lower' ? <li>Country comparisons use compiled reference data and may be less reliable than global averages.</li> : null}
       </ul>
       <p className="mt-4 text-sm text-slate-700">Your measurement is {format(Math.abs(result.diffGlobalCm))} cm {direction} the global average for {result.measurementLabel.toLowerCase()}. This result is within a common adult range. Natural variation is normal. Averages are reference points, not medical standards.</p>
-      <p className="mt-2 text-xs text-slate-600">Percentile is an estimate based on average and distribution assumptions. It should be interpreted as educational, not diagnostic.</p>
+      <p className="mt-2 text-xs text-slate-600">Percentile is an estimate based on average and distribution assumptions. It should be interpreted as educational, not diagnostic. <a className="text-brand-700 underline" href="/penis-size-percentile-calculator">Learn how percentiles work</a>.</p>
     </section>
   );
 }

@@ -97,6 +97,9 @@ export default function Page() {
           <Link href="/average-penis-size-by-country" className="rounded-md border border-slate-300 px-5 py-3 text-center font-semibold text-slate-800 hover:bg-slate-100">
             See Average Size by Country
           </Link>
+          <Link href="/penis-size-percentile-calculator" className="rounded-md border border-brand-300 px-5 py-3 text-center font-semibold text-brand-800 hover:bg-brand-50">
+            Learn Percentiles
+          </Link>
         </div>
         <p className="text-sm text-slate-600">This page is educational and is not medical advice.</p>
       </section>
@@ -217,7 +220,7 @@ export default function Page() {
           <li>Compare with global average values first.</li>
           <li>Use country comparison only as a secondary educational reference.</li>
         </ol>
-        <p className="text-slate-700">You can apply these steps privately with the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link>.</p>
+        <p className="text-slate-700">You can apply these steps privately with the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link> and review distribution context on the <Link className="text-brand-700 underline" href="/penis-size-percentile-calculator">penis size percentile calculator</Link>.</p>
         <p className="text-slate-700">For many users, the most useful outcome is perspective: understanding that variation is common and that averages are simply reference points. If comparison is increasing stress, take a pause and return to objective measurement and educational context.</p>
       </section>
 
