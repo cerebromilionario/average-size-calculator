@@ -69,34 +69,19 @@ export default function PercentileCalculatorPage() {
     }))
   };
 
-  const webAppJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
+  const webAppJsonLd = createWebApplicationJsonLd({
     name: 'Penis Size Percentile Calculator',
-    applicationCategory: 'HealthApplication',
-    operatingSystem: 'All',
     description:
       'Educational percentile and z-score estimator for erect length and girth using global reference averages and standard deviation assumptions.',
-    url: pageUrl
-  };
+    path: '/penis-size-percentile-calculator'
+  });
 
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
+  const articleJsonLd = createArticleJsonLd({
     headline: 'Penis Size Percentile Calculator',
     description:
       'Educational guide to percentile, z-score, average, distribution, and normal variation for global reference length and girth comparisons.',
-    mainEntityOfPage: pageUrl,
-    url: pageUrl,
-    author: {
-      '@type': 'Organization',
-      name: 'Average Size Calculator'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Average Size Calculator'
-    }
-  };
+    path: '/penis-size-percentile-calculator'
+  });
 
   return (
     <article className="space-y-10">

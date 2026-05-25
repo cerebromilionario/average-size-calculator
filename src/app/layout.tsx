@@ -15,7 +15,12 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`
   },
   description: siteConfig.description,
-  metadataBase: new URL(siteConfig.siteUrl)
+  metadataBase: new URL(siteConfig.siteUrl),
+  openGraph: {
+    type: 'website',
+    siteName: siteConfig.name,
+    images: [{ url: siteConfig.defaultImage, width: 1200, height: 630, alt: siteConfig.name }]
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

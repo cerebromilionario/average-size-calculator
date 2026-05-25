@@ -41,7 +41,7 @@ const faqItems = [
 export default function Page() {
   const sortedCountries = [...COUNTRY_AVERAGES_CM].sort((a, b) => a.country.localeCompare(b.country));
   const countryCount = sortedCountries.length;
-  const dateModified = new Date().toISOString().split('T')[0];
+  const dateModified = new Date().toISOString();
 
   const faqJsonLd = createFaqJsonLd(faqItems);
   const articleJsonLd = createArticleJsonLd({
