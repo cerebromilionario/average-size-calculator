@@ -19,16 +19,12 @@ export const metadata: Metadata = {
 
 export default function CalculatorPage() {
   const faqJsonLd = getFaqJsonLd();
-  const appJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
+  const appJsonLd = createWebApplicationJsonLd({
     name: 'Penis Size Calculator',
-    applicationCategory: 'HealthApplication',
-    operatingSystem: 'All',
     description:
       'Private educational calculator to compare penis size measurements against global and country average references in centimeters or inches.',
-    url: pageUrl
-  };
+    path: '/penis-size-calculator'
+  });
 
   return (
     <div className="space-y-10">
