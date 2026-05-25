@@ -24,6 +24,7 @@ export default function Footer() {
             <Link href="/how-to-measure">How to Measure</Link><br/>
             <Link href="/is-my-penis-small">Is My Penis Small?</Link><br/>
             <Link href="/is-5-inches-average">Is 5 Inches Average?</Link><br/>
+            <Link href="/does-penis-size-matter">Does Size Matter?</Link><br/>
             <Link href="/methodology">Methodology</Link><br/>
             <Link href="/data-sources">Data Sources</Link><br/>
             <Link href="/bone-pressed-vs-non-bone-pressed">Bone-Pressed Measurement</Link>
