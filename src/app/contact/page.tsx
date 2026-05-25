@@ -46,6 +46,8 @@ export default function Page() {
           name="contact"
           method="POST"
           action="/thank-you"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
           className="mt-5 space-y-5"
         >
           <input type="hidden" name="form-name" value="contact" />
