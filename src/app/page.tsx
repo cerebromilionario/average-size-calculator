@@ -53,7 +53,7 @@ export default function HomePage() {
         <div className="flex flex-wrap gap-3">
           <Link
             href="/penis-size-calculator"
-            className="inline-flex items-center rounded-lg bg-brand-500 px-5 py-3 font-medium text-white hover:bg-brand-600"
+            className="inline-flex items-center rounded-lg bg-brand-500 px-5 py-3 font-medium text-white hover:bg-blue-700"
           >
             Use the Penis Size Calculator
           </Link>
