@@ -22,7 +22,8 @@ export default function Footer() {
             <Link href="/average-penis-size">Average Size</Link><br/>
             <Link href="/how-to-measure">How to Measure</Link><br/>
             <Link href="/is-my-penis-small">Is My Penis Small?</Link><br/>
-            <Link href="/methodology">Methodology</Link>
+            <Link href="/methodology">Methodology</Link><br/>
+            <Link href="/data-sources">Data Sources</Link>
           </div>
           <div className="space-y-2 text-sm">
             <h3 className="font-semibold text-slate-900">Legal & Contact</h3>
