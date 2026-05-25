@@ -5,6 +5,7 @@ import CookieConsent from '@/components/CookieConsent';
 import { GlobalContentAdsEnd } from '@/components/ads/GlobalContentAds';
 import { siteConfig } from '@/lib/site';
 import './globals.css';
+import StructuredData from '@/components/StructuredData';
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <Header />
+        <StructuredData />
         <main className="container-page">
           {children}
           <GlobalContentAdsEnd />
