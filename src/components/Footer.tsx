@@ -20,6 +20,7 @@ export default function Footer() {
           <div className="space-y-2 text-sm">
             <h3 className="font-semibold text-slate-900">Learn</h3>
             <Link href="/average-penis-size">Average Size</Link><br/>
+            <Link href="/average-penis-girth">Average Penis Girth</Link><br/>
             <Link href="/how-to-measure">How to Measure</Link><br/>
             <Link href="/is-my-penis-small">Is My Penis Small?</Link><br/>
             <Link href="/methodology">Methodology</Link><br/>
