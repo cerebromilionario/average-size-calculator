@@ -6,6 +6,8 @@ import { GlobalContentAdsEnd } from '@/components/ads/GlobalContentAds';
 import { siteConfig } from '@/lib/site';
 import './globals.css';
 import StructuredData from '@/components/StructuredData';
+import JsonLd from '@/components/JsonLd';
+import { createOrganizationJsonLd, createWebSiteJsonLd } from '@/lib/jsonLd';
 
 export const metadata: Metadata = {
   title: {
@@ -21,6 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <Header />
+        <JsonLd data={createOrganizationJsonLd(false)} />
+        <JsonLd data={createWebSiteJsonLd()} />
         <StructuredData />
         <main className="container-page">
           {children}

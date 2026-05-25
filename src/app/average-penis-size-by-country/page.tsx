@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { COUNTRY_AVERAGES_CM, GLOBAL_AVERAGES_CM } from '@/data/penisSizeAverages';
 import StrategicAd from '@/components/ads/StrategicAd';
+import JsonLd from '@/components/JsonLd';
+import { createArticleJsonLd, createDatasetJsonLd, createFaqJsonLd } from '@/lib/jsonLd';
 
 export const metadata: Metadata = {
   title: 'Average Penis Size by Country | Country Comparison Data',
@@ -41,33 +43,19 @@ export default function Page() {
   const countryCount = sortedCountries.length;
   const dateModified = new Date().toISOString().split('T')[0];
 
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqItems.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a }
-    }))
-  };
-
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
+  const faqJsonLd = createFaqJsonLd(faqItems);
+  const articleJsonLd = createArticleJsonLd({
     headline: 'Average Penis Size by Country',
-    description:
-      'Compare average penis size by country using compiled erect length data. Learn how country averages should be interpreted and compare with global averages.',
-    author: {
-      '@type': 'Organization',
-      name: 'Average Size Calculator'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Average Size Calculator'
-    },
-    mainEntityOfPage: 'https://www.averagesizecalculator.com/average-penis-size-by-country',
+    description: 'Compare average penis size by country using compiled erect length data. Learn how country averages should be interpreted and compare with global averages.',
+    path: '/average-penis-size-by-country',
     dateModified
-  };
+  });
+  const datasetJsonLd = createDatasetJsonLd({
+    name: 'Average Penis Size by Country Reference Table',
+    description: 'An educational country comparison table for average erect length values, with limitations and source context.',
+    path: '/average-penis-size-by-country',
+    sources: ['WorldData.info country ranking']
+  });
 
   return (
     <div className="space-y-8">
@@ -219,8 +207,9 @@ export default function Page() {
         ))}
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={datasetJsonLd} />
     </div>
   );
 }

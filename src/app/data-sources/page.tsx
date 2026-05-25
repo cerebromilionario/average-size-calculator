@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import JsonLd from '@/components/JsonLd';
+import { createArticleJsonLd, createDatasetJsonLd, createFaqJsonLd } from '@/lib/jsonLd';
 
 export const metadata: Metadata = {
   title: 'Data Sources | Average Size Calculator',
@@ -21,27 +23,19 @@ const faqItems = [
 ] as const;
 
 export default function DataSourcesPage() {
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqItems.map(([question, answer]) => ({
-      '@type': 'Question',
-      name: question,
-      acceptedAnswer: { '@type': 'Answer', text: answer }
-    }))
-  };
-
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
+  const faqJsonLd = createFaqJsonLd(faqItems.map(([q, a]) => ({ q, a })));
+  const articleJsonLd = createArticleJsonLd({
     headline: 'Data Sources',
-    description:
-      'A transparent overview of the research references, country data, statistical assumptions, and limitations used by Average Size Calculator.',
-    author: { '@type': 'Organization', name: 'Average Size Calculator' },
-    publisher: { '@type': 'Organization', name: 'Average Size Calculator' },
-    mainEntityOfPage: 'https://averagesizecalculator.site/data-sources',
-    dateModified: new Date().toISOString()
-  };
+    description: 'A transparent overview of the research references, country data, statistical assumptions, and limitations used by Average Size Calculator.',
+    path: '/data-sources'
+  });
+  const datasetJsonLd = createDatasetJsonLd({
+    name: 'Average Size Calculator Data Sources',
+    description: 'A transparent educational reference describing the global averages, country comparison data, and statistical assumptions used by Average Size Calculator.',
+    path: '/data-sources',
+    keywords: ['average penis size data', 'penis size statistics', 'global average penis size', 'country average penis size', 'percentile estimate'],
+    sources: ['PubMed / Veale et al. 2015', 'WorldData.info country ranking', 'https://averagesizecalculator.site/average-penis-size-by-country']
+  });
 
   return (
     <article className="space-y-10">
@@ -66,8 +60,9 @@ export default function DataSourcesPage() {
       <section className="rounded-xl border border-blue-200 bg-blue-50 p-5 space-y-2"><h2 className="text-2xl font-semibold text-slate-900">Educational disclaimer</h2><p className="text-slate-800">Average Size Calculator provides educational comparisons based on available reference data. It does not provide medical advice, diagnosis, or treatment. If you have concerns about pain, development, sexual function, or health, consider speaking with a qualified healthcare professional.</p></section>
       <section className="space-y-4"><h2 className="text-2xl font-semibold text-slate-900">FAQ</h2>{faqItems.map(([q, a]) => <div key={q} className="space-y-1"><h3 className="text-lg font-semibold text-slate-900">{q}</h3><p className="text-slate-700">{a}</p></div>)}</section>
       <section className="rounded-2xl border border-slate-200 bg-white p-6 text-center space-y-2"><h2 className="text-2xl font-semibold text-slate-900">More pages</h2><p className="text-slate-700"><Link href="/average-penis-size" className="text-brand-700 underline font-medium">Average Penis Size</Link> · <Link href="/terms-of-use" className="text-brand-700 underline font-medium">Terms of Use</Link> · <Link href="/contact" className="text-brand-700 underline font-medium">Contact</Link></p></section>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={datasetJsonLd} />
     </article>
   );
 }
