@@ -116,7 +116,7 @@ export default function Page() {
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">How to Measure Penis Size Correctly</h1>
         <p className="max-w-3xl text-base text-slate-700 sm:text-lg">A private, educational guide to measuring length and girth before comparing your result with average size data.</p>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Link href="/penis-size-calculator" className="rounded-md bg-brand-700 px-5 py-3 text-center font-semibold text-white hover:bg-brand-800">
+          <Link href="/penis-size-calculator" className="rounded-md bg-blue-700 px-5 py-3 text-center font-semibold text-white hover:bg-blue-800">
             Use the Penis Size Calculator
           </Link>
           <Link href="/average-penis-size" className="rounded-md border border-slate-300 px-5 py-3 text-center font-semibold text-slate-800 hover:bg-slate-100">
@@ -267,7 +267,7 @@ export default function Page() {
         <h2 className="text-2xl font-semibold text-slate-900">Ready to compare?</h2>
         <p className="text-slate-700">Use a consistent method, then compare your measurement with global data and country erect-length context.</p>
         <div className="flex flex-col justify-center gap-3 sm:flex-row">
-          <Link href="/penis-size-calculator" className="rounded-md bg-brand-700 px-5 py-3 font-semibold text-white hover:bg-brand-800">Use the Penis Size Calculator</Link>
+          <Link href="/penis-size-calculator" className="rounded-md bg-blue-700 px-5 py-3 font-semibold text-white hover:bg-blue-800">Use the Penis Size Calculator</Link>
           <Link href="/average-penis-size-by-country" className="rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-800 hover:bg-slate-100">Explore average penis size by country</Link>
         </div>
       </section>

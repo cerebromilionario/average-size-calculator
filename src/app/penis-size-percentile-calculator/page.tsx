@@ -111,7 +111,7 @@ export default function PercentileCalculatorPage() {
           ))}
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a href="#calculator" className="inline-flex rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-white hover:bg-brand-700">
+          <a href="#calculator" className="btn-primary">
             Open the Percentile Estimator
           </a>
           <Link className="inline-flex rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50" href="/penis-size-calculator">
@@ -204,7 +204,7 @@ export default function PercentileCalculatorPage() {
         <h2 className="text-2xl font-semibold text-slate-900">Does the percentile calculator use country data?</h2>
         <p className="text-slate-700">No. This percentile page uses global reference data for statistical consistency. Country data is used on the main calculator only for erect length comparison and can be less stable across sources.</p>
         <p className="text-slate-700">If your goal is country average context rather than percentile distribution context, use the dedicated comparison tool. You can also read <Link className="text-brand-700 underline" href="/average-penis-size-by-country">average size by country</Link> for educational background.</p>
-        <Link className="inline-flex rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700" href="/penis-size-calculator">Compare with your country average</Link>
+        <Link className="btn-primary" href="/penis-size-calculator">Compare with your country average</Link>
       </section>
 
       <section className="space-y-3">

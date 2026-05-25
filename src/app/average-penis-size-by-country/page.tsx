@@ -77,7 +77,7 @@ export default function Page() {
           Compare average erect length by country and understand how country-level size data should be interpreted.
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
-          <Link href="/penis-size-calculator" className="rounded-lg bg-brand-700 px-4 py-2 font-medium text-white hover:bg-brand-800">
+          <Link href="/penis-size-calculator" className="rounded-lg bg-blue-700 px-4 py-2 font-medium text-white hover:bg-blue-800">
             Use the Penis Size Calculator
           </Link>
           <Link href="/average-penis-size" className="rounded-lg border border-slate-300 px-4 py-2 font-medium text-slate-800 hover:bg-slate-50">
@@ -185,7 +185,7 @@ export default function Page() {
           Use the calculator to compare your measurement with the global average and, when available, your selected country average. Your input is calculated in your browser and is not stored.
         </p>
         <div className="mt-4">
-          <Link href="/penis-size-calculator" className="rounded-lg bg-brand-700 px-4 py-2 font-medium text-white hover:bg-brand-800">
+          <Link href="/penis-size-calculator" className="rounded-lg bg-blue-700 px-4 py-2 font-medium text-white hover:bg-blue-800">
             Use the Penis Size Calculator
           </Link>
         </div>

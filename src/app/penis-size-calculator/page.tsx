@@ -35,7 +35,7 @@ export default function CalculatorPage() {
         <p className="mt-4 max-w-3xl text-lg text-slate-700">Privately compare your measurement with global and country averages in centimeters or inches.</p>
         <p className="mt-3 max-w-3xl text-sm text-slate-600">Your measurement is calculated in your browser and is not stored.</p>
         <p className="mt-2 max-w-3xl text-sm text-slate-600">Want a deeper statistical view? <a className="text-brand-700 underline" href="/penis-size-percentile-calculator">Try the percentile calculator</a>.</p>
-        <a href="#calculator" className="mt-6 inline-flex rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-white hover:bg-brand-700">Start the private calculation</a>
+        <a href="#calculator" className="btn-primary mt-6">Start the private calculation</a>
       </section>
 
       <PenisSizeCalculator />

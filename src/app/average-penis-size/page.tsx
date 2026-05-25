@@ -91,7 +91,7 @@ export default function Page() {
           Learn the average erect length, erect girth, and flaccid length, and understand what these numbers actually mean.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Link href="/penis-size-calculator" className="rounded-md bg-brand-700 px-5 py-3 text-center font-semibold text-white hover:bg-brand-800">
+          <Link href="/penis-size-calculator" className="rounded-md bg-blue-700 px-5 py-3 text-center font-semibold text-white hover:bg-blue-800">
             Use the Penis Size Calculator
           </Link>
           <Link href="/average-penis-size-by-country" className="rounded-md border border-slate-300 px-5 py-3 text-center font-semibold text-slate-800 hover:bg-slate-100">
@@ -243,7 +243,7 @@ export default function Page() {
       <section className="rounded-2xl border border-slate-200 bg-white p-6 text-center space-y-3">
         <h2 className="text-2xl font-semibold text-slate-900">Compare privately and consistently</h2>
         <p className="text-slate-700">Use the calculator to compare length or girth against global reference values in centimeters or inches.</p>
-        <Link href="/penis-size-calculator" className="inline-block rounded-md bg-brand-700 px-5 py-3 font-semibold text-white hover:bg-brand-800">Use the private penis size calculator</Link>
+        <Link href="/penis-size-calculator" className="inline-block rounded-md bg-blue-700 px-5 py-3 font-semibold text-white hover:bg-blue-800">Use the private penis size calculator</Link>
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
