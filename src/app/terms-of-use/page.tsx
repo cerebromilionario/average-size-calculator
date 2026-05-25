@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const effectiveDate = 'May 24, 2026';
+const effectiveDate = 'May 25, 2026';
 const termsUrl = 'https://averagesizecalculator.com/terms-of-use';
 
 export const metadata: Metadata = {
@@ -123,6 +123,14 @@ export default function Page() {
             </Link>
             . The calculator is designed to run in the browser, and measurement inputs should not be stored by the
             site. Contact form data is processed only when voluntarily submitted.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-slate-900">Advertising</h2>
+          <p className="mt-3 leading-7">
+            The site may display third-party advertisements. Ads are provided by external networks and do not
+            represent medical advice, endorsement, or editorial content from Average Size Calculator.
           </p>
         </section>
 

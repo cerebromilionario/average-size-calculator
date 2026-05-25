@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site';
+import StrategicAd from '@/components/ads/StrategicAd';
 
 export const metadata: Metadata = {
   title: 'Average Size Calculator | Private Body Size Comparison Tool',
@@ -175,6 +176,8 @@ export default function HomePage() {
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Frequently asked questions</h2>
+
+      <StrategicAd type="native" />
         <div className="space-y-3">
           {faqItems.map((item) => (
             <article key={item.question} className="card">

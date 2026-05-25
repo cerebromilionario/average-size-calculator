@@ -5,6 +5,7 @@ import EducationalDisclaimer from '@/components/EducationalDisclaimer';
 import CalculatorFaq, { getFaqJsonLd } from '@/components/CalculatorFaq';
 import DataQualityNotice from '@/components/DataQualityNotice';
 import { siteConfig } from '@/lib/site';
+import StrategicAd from '@/components/ads/StrategicAd';
 
 const pageUrl = `${siteConfig.siteUrl}/penis-size-calculator`;
 
@@ -59,6 +60,8 @@ export default function CalculatorPage() {
         <p className="text-slate-700">The calculator classifies results as below average, around average, or above average using global reference values. Below average does not automatically indicate a medical condition, and above average does not indicate superior health or function. Average is a statistical midpoint, not a target that every individual should match.</p>
         <p className="text-slate-700">Small differences are common and may have little practical meaning. Measurement technique, timing, and unit conversion can all change outcomes. Natural variation across adults is normal, and this tool is designed to provide private educational context rather than judgment.</p>
       </section>
+
+      <StrategicAd type="rectangle" />
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">Global average penis size used by this calculator</h2>
