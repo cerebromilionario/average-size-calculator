@@ -32,6 +32,7 @@ export default function Footer() {
             <Link href="/data-sources">Data Sources</Link><br />
             <Link href="/about">About</Link><br />
             <Link href="/glossary">Glossary</Link><br />
+            <Link href="/ai-overview">AI Overview</Link><br />
             <Link href="/privacy-policy">Privacy Policy</Link><br />
             <Link href="/terms-of-use">Terms of Use</Link><br />
             <Link href="/contact">Contact</Link><br />
