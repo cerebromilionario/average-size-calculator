@@ -14,6 +14,7 @@ const mainPages = [
   ['/penis-size-calculator', 'Penis Size Calculator'],
   ['/penis-size-percentile-calculator', 'Penis Size Percentile Calculator'],
   ['/how-penis-size-percentiles-work', 'How Penis Size Percentiles Work'],
+  ['/penis-size-standard-deviation', 'Penis Size Standard Deviation'],
   ['/average-penis-size', 'Average Penis Size'],
   ['/average-penis-girth', 'Average Penis Girth'],
   ['/average-penis-size-by-country', 'Average Penis Size by Country'],
@@ -158,7 +159,7 @@ export default function AiOverviewPage() {
           ))}
         </ul>
         <p className="mt-4 text-slate-700">
-          <Link className="text-brand-700 underline" href="/how-penis-size-percentiles-work">How Penis Size Percentiles Work</Link> explains how percentile, z-score, standard deviation, average, and measurement limitations work in educational percentile estimates.
+          <Link className="text-brand-700 underline" href="/how-penis-size-percentiles-work">How Penis Size Percentiles Work</Link> explains how percentile, z-score, standard deviation, average, and measurement limitations work in educational percentile estimates. The <Link className="text-brand-700 underline" href="/penis-size-standard-deviation">Penis Size Standard Deviation</Link> guide explains standard deviation, average, z-score, percentile estimates, distribution assumptions, and measurement limitations.
         </p>
       </section>
 
