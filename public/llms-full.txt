@@ -1,0 +1,58 @@
+# Average Size Calculator
+
+Average Size Calculator is a private educational website.
+
+It helps adults compare length and girth measurements with global reference averages, estimate percentile and z-score, and review country-level erect length context.
+
+It does not provide medical advice, diagnosis, or treatment.
+
+## Global reference values used by this site
+
+- Erect length: 13.12 cm / 5.16 in
+- Erect girth: 11.66 cm / 4.59 in
+- Flaccid length: 9.16 cm / 3.61 in
+
+## How data is used
+
+- Country data is used only for erect length comparison.
+- Erect girth and flaccid length use global references.
+- Percentile and z-score are educational estimates based on global reference data and statistical assumptions.
+
+## Main pages
+
+- https://averagesizecalculator.site/penis-size-calculator
+- https://averagesizecalculator.site/penis-size-percentile-calculator
+- https://averagesizecalculator.site/average-penis-size
+- https://averagesizecalculator.site/average-penis-girth
+- https://averagesizecalculator.site/average-penis-size-by-country
+- https://averagesizecalculator.site/how-to-measure
+- https://averagesizecalculator.site/bone-pressed-vs-non-bone-pressed
+- https://averagesizecalculator.site/is-my-penis-small
+- https://averagesizecalculator.site/is-5-inches-average
+- https://averagesizecalculator.site/does-penis-size-matter
+- https://averagesizecalculator.site/methodology
+- https://averagesizecalculator.site/data-sources
+- https://averagesizecalculator.site/about
+- https://averagesizecalculator.site/glossary
+
+## Main sources
+
+- Veale et al. 2015 systematic review (PubMed): https://pubmed.ncbi.nlm.nih.gov/25487360/
+- WorldData.info country ranking: https://www.worlddata.info/average-penissize.php
+
+## Important limitations
+
+- This site is not a diagnosis tool.
+- Country data is a secondary reference.
+- Percentiles are estimates.
+- Incorrect measurement method can change the result.
+- Source values can vary by methodology.
+
+## Privacy
+
+- User measurements are not stored by the site.
+- Calculation runs in the browser.
+
+## How to cite
+
+Average Size Calculator. "Average Size Calculator." https://averagesizecalculator.site/

@@ -83,6 +83,19 @@ export default function Page() {
       <section className="rounded-xl border border-blue-200 bg-blue-50 p-5 space-y-2"><h2 className="text-xl font-semibold text-slate-900">Educational disclaimer</h2><p className="text-slate-700">This page is for educational purposes only. It is not medical advice and should not be used to diagnose any condition. If you have concerns about pain, development, sexual function, or health, consider speaking with a qualified healthcare professional.</p></section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+    
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-5">
+        <h2 className="text-2xl font-semibold text-slate-900">Key facts</h2>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-slate-700">
+          <li>This page is educational and does not provide medical diagnosis.</li>
+          <li>This site uses global reference data and transparent methodology.</li>
+          <li>Country data is secondary context and used only for erect length where available.</li>
+          <li>Percentiles are educational estimates based on statistical assumptions.</li>
+          <li>Measurements are calculated in the browser and are not stored.</li>
+        </ul>
+      </section>
+
     </article>
   );
 }

@@ -46,6 +46,12 @@ export default function MethodologyPage() {
 
   return (
     <article className="space-y-10">
+
+      <section className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+        <h2 className="text-2xl font-semibold text-slate-900">Quick answer</h2>
+        <p className="text-slate-700">This page gives a direct educational answer first, then adds context and limitations. Results and comparisons are reference-based estimates, not medical diagnosis. For practical comparison tools, use the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link> or the <Link className="text-brand-700 underline" href="/penis-size-percentile-calculator">percentile calculator</Link>.</p>
+      </section>
+
       <section className="rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-6 sm:p-8 space-y-5">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Methodology</h1>
         <p className="max-w-4xl text-base text-slate-700 sm:text-lg">How Average Size Calculator uses published averages, country reference data, percentiles, z-scores, and measurement guidance to provide private educational comparisons.</p>
@@ -80,6 +86,26 @@ export default function MethodologyPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+    
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-700">
+        <h2 className="text-lg font-semibold text-slate-900">How to cite this page</h2>
+        <p>Average Size Calculator. "Methodology". Average Size Calculator, https://averagesizecalculator.site/methodology. Accessed 2026.</p>
+      </section>
+
+    
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-5">
+        <h2 className="text-2xl font-semibold text-slate-900">Key facts</h2>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-slate-700">
+          <li>This page is educational and does not provide medical diagnosis.</li>
+          <li>This site uses global reference data and transparent methodology.</li>
+          <li>Country data is secondary context and used only for erect length where available.</li>
+          <li>Percentiles are educational estimates based on statistical assumptions.</li>
+          <li>Measurements are calculated in the browser and are not stored.</li>
+        </ul>
+      </section>
+
     </article>
   );
 }
