@@ -87,8 +87,13 @@ export default function Page() {
     <article className="space-y-10">
 
       <section className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-        <h2 className="text-2xl font-semibold text-slate-900">Quick answer</h2>
-        <p className="text-slate-700">This page gives a direct educational answer first, then adds context and limitations. Results and comparisons are reference-based estimates, not medical diagnosis. For practical comparison tools, use the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link> or the <Link className="text-brand-700 underline" href="/penis-size-percentile-calculator">percentile calculator</Link>.</p>
+        <h2 className="text-2xl font-semibold text-slate-900">Quick answer: what is the average penis size?</h2>
+        <p className="text-slate-700">The global average values used by this site are {formatCm(erectLength)} / {formatInches(erectLength)} for erect length, {formatCm(erectGirth)} / {formatInches(erectGirth)} for erect girth, and {formatCm(flaccidLength)} / {formatInches(flaccidLength)} for flaccid length.</p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-slate-700">
+          <li>Averages are reference points for educational comparison, not medical diagnosis.</li>
+          <li>Measurement method matters, especially when values are close to the reference average.</li>
+          <li>For a private comparison, use the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link> or the <Link className="text-brand-700 underline" href="/penis-size-percentile-calculator">percentile calculator</Link>.</li>
+        </ul>
       </section>
 
       <section className="space-y-5 rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-6 sm:p-8">
@@ -165,7 +170,7 @@ export default function Page() {
         <h2 className="text-2xl font-semibold text-slate-900">Where do these averages come from?</h2>
         <p className="text-slate-700">The global references on this page come from the Veale et al. 2015 systematic review. The analysis reviewed measurements in up to 15,521 men and used these pooled measurements to build nomograms. This approach is generally more methodologically reliable than informal online surveys because it emphasizes standardized techniques and study-level quality review.</p>
         <p className="text-slate-700">Even with stronger methodology, averages remain statistical references. They are not a definition of an individual person’s health, function, or worth.</p>
-        <p className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700">Source: {GLOBAL_AVERAGE_SOURCE.label}, PubMed. <a className="text-brand-700 underline" href={GLOBAL_AVERAGE_SOURCE.url} target="_blank" rel="noreferrer">Read on PubMed</a>.</p>
+        <p className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700">Source: {GLOBAL_AVERAGE_SOURCE.label}, PubMed. <a className="text-brand-700 underline" href={GLOBAL_AVERAGE_SOURCE.url} target="_blank" rel="noopener noreferrer">Read on PubMed</a>.</p>
       </section>
 
       <DataQualityNotice />

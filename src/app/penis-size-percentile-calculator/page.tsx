@@ -87,8 +87,13 @@ export default function PercentileCalculatorPage() {
     <article className="space-y-10">
 
       <section className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-        <h2 className="text-2xl font-semibold text-slate-900">Quick answer</h2>
-        <p className="text-slate-700">This page gives a direct educational answer first, then adds context and limitations. Results and comparisons are reference-based estimates, not medical diagnosis. For practical comparison tools, use the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link> or the <Link className="text-brand-700 underline" href="/penis-size-percentile-calculator">percentile calculator</Link>.</p>
+        <h2 className="text-2xl font-semibold text-slate-900">Quick answer: what does a percentile mean?</h2>
+        <p className="text-slate-700">A percentile estimates where a measurement falls in a reference distribution. It is a statistical estimate based on global reference data, not a medical diagnosis or personal score.</p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-slate-700">
+          <li>The calculator converts measurements to centimeters when needed.</li>
+          <li>Percentile and z-score results depend on statistical assumptions.</li>
+          <li>For country-level erect length context, use the <Link className="text-brand-700 underline" href="/penis-size-calculator">penis size calculator</Link>.</li>
+        </ul>
       </section>
 
       <section className="rounded-2xl bg-gradient-to-b from-brand-50 to-white p-6 md:p-10">
