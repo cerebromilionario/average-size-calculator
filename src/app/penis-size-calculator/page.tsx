@@ -38,6 +38,18 @@ export default function CalculatorPage() {
 
       <PenisSizeCalculator />
 
+      <section className="rounded-2xl border border-brand-100 bg-brand-50/60 p-6 shadow-sm" aria-labelledby="quick-calculator-answer">
+        <h2 id="quick-calculator-answer" className="text-2xl font-semibold text-slate-900">Quick answer: how does the penis size calculator work?</h2>
+        <p className="mt-3 text-slate-700">Enter your measurement, choose centimeters or inches, select the measurement type, and optionally choose a country. The calculator compares your input with global reference averages and available country-level erect length data.</p>
+        <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+          <li>Global averages are the primary reference.</li>
+          <li>Country comparison is available for erect length only.</li>
+          <li>Girth and flaccid length use global reference values.</li>
+          <li>Results are educational estimates, not medical advice.</li>
+          <li>Your measurement is calculated in your browser and is not stored.</li>
+        </ul>
+      </section>
+
       <DataQualityNotice />
 
       <section className="space-y-4">
