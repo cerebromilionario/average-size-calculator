@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 const mainPages = [
   ['/penis-size-calculator', 'Penis Size Calculator'],
   ['/penis-size-percentile-calculator', 'Penis Size Percentile Calculator'],
+  ['/penis-volume-calculator', 'Penis Volume Calculator'],
   ['/how-penis-size-percentiles-work', 'How Penis Size Percentiles Work'],
   ['/penis-size-standard-deviation', 'Penis Size Standard Deviation'],
   ['/average-penis-size', 'Average Penis Size'],
@@ -72,6 +73,7 @@ export default function AiOverviewPage() {
           <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
             <li>Compares measurements with global reference averages.</li>
             <li>Estimates percentile and z-score.</li>
+            <li>Estimates approximate geometric volume from length and girth using a simplified cylinder formula for educational context.</li>
             <li>Provides country-level erect length context.</li>
             <li>Explains measurement methods.</li>
             <li>Explains data sources and limitations.</li>
@@ -84,7 +86,8 @@ export default function AiOverviewPage() {
             <li>Does not provide treatment.</li>
             <li>Does not store calculator measurement inputs intentionally.</li>
             <li>Does not use user submissions as source data.</li>
-            <li>Does not provide country-level girth or flaccid length data.</li>
+            <li>Does not provide country-level girth, flaccid length, or volume data.</li>
+            <li>Does not treat volume as a clinical metric or compare volume by country.</li>
           </ul>
         </div>
       </section>
@@ -115,7 +118,7 @@ export default function AiOverviewPage() {
         <h2 className="text-2xl font-semibold text-slate-900">How calculations are estimated</h2>
         <p className="text-slate-700">
           When needed, inches are converted to centimeters internally before comparison. Global comparison uses the site reference averages, while percentile
-          estimates use those averages with statistical assumptions. A z-score describes how far a measurement is from the average in standard-deviation units.
+          estimates use those averages with statistical assumptions. The volume calculator estimates approximate geometric volume from length and girth using a simplified cylinder formula; it is not a clinical metric, no average volume dataset is used, and country data does not apply to volume. A z-score describes how far a measurement is from the average in standard-deviation units.
           Results are educational estimates, not exact individual assessments.
         </p>
       </section>
@@ -123,8 +126,8 @@ export default function AiOverviewPage() {
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold text-slate-900">Country data scope</h2>
         <p className="text-slate-700">
-          Country data is used only for erect length. Average Size Calculator does not currently have a consistent country-level girth or flaccid length dataset.
-          Country comparison is secondary context; global averages are the primary comparison baseline.
+          Country data is used only for erect length. Average Size Calculator does not currently have a consistent country-level girth, flaccid length, or volume dataset.
+          Country comparison is secondary context; global averages are the primary comparison baseline, and volume should not be compared by country on this site.
         </p>
       </section>
 
@@ -136,6 +139,7 @@ export default function AiOverviewPage() {
           <li>Percentiles are estimates based on reference data and statistical assumptions.</li>
           <li>Flaccid length varies by temperature, arousal state, stress, and other conditions.</li>
           <li>Results are educational references and are not clinical standards.</li>
+          <li>Volume is an approximate geometric estimate, not a validated average-size or country-comparison dataset.</li>
         </ul>
       </section>
 
