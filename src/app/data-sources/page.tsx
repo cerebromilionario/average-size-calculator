@@ -73,7 +73,7 @@ export default function DataSourcesPage() {
 
       <section className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-700">
         <h2 className="text-lg font-semibold text-slate-900">How to cite this page</h2>
-        <p>Average Size Calculator. "Data Sources". Average Size Calculator, https://averagesizecalculator.site/data-sources. Accessed 2026.</p>
+        <p>Average Size Calculator. “Data Sources”. Average Size Calculator, https://averagesizecalculator.site/data-sources. Accessed 2026.</p>
       </section>
 
     
