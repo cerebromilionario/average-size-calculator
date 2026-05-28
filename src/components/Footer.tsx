@@ -23,6 +23,7 @@ export default function Footer() {
             <Link href="/average-penis-size-by-country">Average by Country</Link><br />
             <Link href="/is-my-penis-small">Is My Penis Small?</Link><br />
             <Link href="/does-penis-size-matter">Does Penis Size Matter?</Link><br />
+            <Link href="/how-penis-size-percentiles-work">How Percentiles Work</Link><br />
             <Link href="/how-to-measure">How to Measure</Link><br />
             <Link href="/bone-pressed-vs-non-bone-pressed">Bone-Pressed Measurement</Link>
           </div>

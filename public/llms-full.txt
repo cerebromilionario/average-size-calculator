@@ -20,6 +20,8 @@ It does not provide medical advice, diagnosis, or treatment.
 
 ## How calculations are estimated
 
+The page https://averagesizecalculator.site/how-penis-size-percentiles-work explains how percentile, z-score, standard deviation, average, and measurement limitations work in educational percentile estimates.
+
 Measurements entered in inches are converted to centimeters internally when needed. The main calculator compares user input with global reference averages and, when available, country-level erect length data. Percentile estimates use global reference averages and statistical assumptions. A z-score describes how far a measurement is from the reference average in standard deviation units. These results are educational estimates only and are not medical diagnoses.
 
 ## Country data scope
@@ -42,6 +44,7 @@ Average Size Calculator is a private educational website for adults that compare
 
 - https://averagesizecalculator.site/penis-size-calculator
 - https://averagesizecalculator.site/penis-size-percentile-calculator
+- https://averagesizecalculator.site/how-penis-size-percentiles-work
 - https://averagesizecalculator.site/average-penis-size
 - https://averagesizecalculator.site/average-penis-girth
 - https://averagesizecalculator.site/average-penis-size-by-country

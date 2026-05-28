@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 const mainPages = [
   ['/penis-size-calculator', 'Penis Size Calculator'],
   ['/penis-size-percentile-calculator', 'Penis Size Percentile Calculator'],
+  ['/how-penis-size-percentiles-work', 'How Penis Size Percentiles Work'],
   ['/average-penis-size', 'Average Penis Size'],
   ['/average-penis-girth', 'Average Penis Girth'],
   ['/average-penis-size-by-country', 'Average Penis Size by Country'],
@@ -156,6 +157,9 @@ export default function AiOverviewPage() {
             </li>
           ))}
         </ul>
+        <p className="mt-4 text-slate-700">
+          <Link className="text-brand-700 underline" href="/how-penis-size-percentiles-work">How Penis Size Percentiles Work</Link> explains how percentile, z-score, standard deviation, average, and measurement limitations work in educational percentile estimates.
+        </p>
       </section>
 
       <section className="space-y-3">
