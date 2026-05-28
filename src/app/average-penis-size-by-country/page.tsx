@@ -121,7 +121,7 @@ export default function Page() {
         <h2 className="text-2xl font-semibold text-slate-900">Data source</h2>
         <p className="text-slate-700">
           Country-level values on this page are based on the{' '}
-          <a className="text-brand-700 underline" href="https://www.worlddata.info/average-penissize.php" target="_blank" rel="noreferrer">
+          <a className="text-brand-700 underline" href="https://www.worlddata.info/average-penissize.php" target="_blank" rel="noopener noreferrer">
             WorldData.info country ranking
           </a>
           . This source is used here for country averages of erect length only.

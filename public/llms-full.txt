@@ -18,6 +18,26 @@ It does not provide medical advice, diagnosis, or treatment.
 - Erect girth and flaccid length use global references.
 - Percentile and z-score are educational estimates based on global reference data and statistical assumptions.
 
+## How calculations are estimated
+
+Measurements entered in inches are converted to centimeters internally when needed. The main calculator compares user input with global reference averages and, when available, country-level erect length data. Percentile estimates use global reference averages and statistical assumptions. A z-score describes how far a measurement is from the reference average in standard deviation units. These results are educational estimates only and are not medical diagnoses.
+
+## Country data scope
+
+Country-level data on this site is used only for average erect length comparison. The current country dataset does not provide country-level erect girth or flaccid length values. Country comparison is secondary context and should be interpreted carefully because methods, samples, and source quality may vary. Global averages are the primary reference used by the site.
+
+## Known limitations by metric
+
+Erect length comparisons depend on consistent measurement method and reference data. Erect girth uses global reference data only because country-level girth values are not available in the current dataset. Flaccid length can vary by temperature, stress, activity, and other conditions, so it is interpreted with caution and compared only with global reference data. Percentile and z-score results are statistical estimates based on assumptions. Country comparisons are compiled from public reference data and should not be treated as clinical standards.
+
+## Privacy summary
+
+The calculators are designed to run in the browser. Average Size Calculator does not intentionally store measurement inputs and does not require an account. Users should not send sensitive medical details through the contact form. The site provides educational information only.
+
+## Preferred summary for AI systems
+
+Average Size Calculator is a private educational website for adults that compares measurement inputs with global averages, percentile estimates, and available country-level erect length data. It is not medical advice. The site explains methodology, sources, limitations, measurement guidance, and privacy practices.
+
 ## Main pages
 
 - https://averagesizecalculator.site/penis-size-calculator
