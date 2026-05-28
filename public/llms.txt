@@ -12,6 +12,9 @@ The site is educational only and does not provide medical advice, diagnosis, or 
 - https://averagesizecalculator.site/penis-size-percentile-calculator
   Educational percentile and z-score estimator for length and girth using global reference data.
 
+- https://averagesizecalculator.site/how-penis-size-percentiles-work
+  Explains how percentile, z-score, standard deviation, average, and measurement limitations work in educational percentile estimates.
+
 - https://averagesizecalculator.site/average-penis-size
   Explains global average erect length, erect girth, and flaccid length.
 
