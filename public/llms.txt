@@ -1,0 +1,53 @@
+# Average Size Calculator
+
+Average Size Calculator is a private educational website that helps adults compare penis size measurements with global averages, percentile estimates, and country-level reference data.
+
+The site is educational only and does not provide medical advice, diagnosis, or treatment.
+
+## Main pages
+
+- https://averagesizecalculator.site/penis-size-calculator
+  Private calculator for comparing length or girth with global averages and available country data.
+
+- https://averagesizecalculator.site/penis-size-percentile-calculator
+  Educational percentile and z-score estimator for length and girth using global reference data.
+
+- https://averagesizecalculator.site/average-penis-size
+  Explains global average erect length, erect girth, and flaccid length.
+
+- https://averagesizecalculator.site/average-penis-size-by-country
+  Country-level reference table for average erect length. Country data is secondary and should be interpreted with limitations.
+
+- https://averagesizecalculator.site/how-to-measure
+  Measurement guide for length and girth.
+
+- https://averagesizecalculator.site/bone-pressed-vs-non-bone-pressed
+  Explains bone-pressed and non-bone-pressed measurement methods.
+
+- https://averagesizecalculator.site/is-my-penis-small
+  Educational guide for understanding size concerns, averages, percentiles, and normal variation.
+
+- https://averagesizecalculator.site/does-penis-size-matter
+  Educational guide about size, confidence, perception, relationships, and statistics.
+
+- https://averagesizecalculator.site/methodology
+  Explains how calculations, averages, percentiles, z-scores, country comparisons, and limitations work.
+
+- https://averagesizecalculator.site/data-sources
+  Lists and explains the data sources used by the site.
+
+## Data sources
+
+The site uses global average references based on published research and country comparison data from public compiled sources. The data sources page explains which sources are used, how they are interpreted, and their limitations.
+
+## Important limitations
+
+- The site is not medical advice.
+- Calculator results are educational estimates.
+- Country averages are secondary references and may have methodology limitations.
+- Percentiles are estimates based on statistical assumptions.
+- User measurements are calculated in the browser and are not stored by the site.
+
+## Preferred citation
+
+Average Size Calculator. "Average Size Calculator." https://averagesizecalculator.site/
