@@ -258,7 +258,7 @@ export default function Page() {
 
       <section className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-700">
         <h2 className="text-lg font-semibold text-slate-900">How to cite this page</h2>
-        <p>Average Size Calculator. "Average Penis Size". Average Size Calculator, https://averagesizecalculator.site/average-penis-size. Accessed 2026.</p>
+        <p>Average Size Calculator. “Average Penis Size”. Average Size Calculator, https://averagesizecalculator.site/average-penis-size. Accessed 2026.</p>
       </section>
 
     
