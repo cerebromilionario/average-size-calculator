@@ -15,6 +15,9 @@ The site is educational only and does not provide medical advice, diagnosis, or 
 - https://averagesizecalculator.site/penis-volume-calculator
   Estimates approximate geometric volume from length and girth using a simplified cylinder formula for educational context.
 
+- https://averagesizecalculator.site/condom-size-calculator
+  Estimates condom nominal width from girth or circumference and explains snug, regular, large, and wider fit ranges for educational context.
+
 - https://averagesizecalculator.site/how-penis-size-percentiles-work
   Explains how percentile, z-score, standard deviation, average, and measurement limitations work in educational percentile estimates.
 
