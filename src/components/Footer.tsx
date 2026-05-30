@@ -15,7 +15,8 @@ export default function Footer() {
             <h3 className="font-semibold text-slate-900">Tools</h3>
             <Link href="/penis-size-calculator">Penis Size Calculator</Link><br />
             <Link href="/penis-size-percentile-calculator">Percentile Calculator</Link><br />
-            <Link href="/penis-volume-calculator">Volume Calculator</Link>
+            <Link href="/penis-volume-calculator">Volume Calculator</Link><br />
+            <Link href="/condom-size-calculator">Condom Size Calculator</Link>
           </div>
           <div className="space-y-2 text-sm">
             <h3 className="font-semibold text-slate-900">Learn</h3>

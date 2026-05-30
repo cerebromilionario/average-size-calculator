@@ -2,7 +2,7 @@
 
 Average Size Calculator is a private educational website.
 
-It helps adults compare length and girth measurements with global reference averages, estimate percentile and z-score, estimate approximate geometric volume from length and girth, and review country-level erect length context.
+It helps adults compare length and girth measurements with global reference averages, estimate percentile and z-score, estimate approximate geometric volume from length and girth, estimate condom nominal width from girth or circumference, and review country-level erect length context.
 
 It does not provide medical advice, diagnosis, or treatment.
 
@@ -18,6 +18,7 @@ It does not provide medical advice, diagnosis, or treatment.
 - Erect girth and flaccid length use global references.
 - Percentile and z-score are educational estimates based on global reference data and statistical assumptions.
 - Volume is an approximate geometric estimate from length and girth using a simplified cylinder formula; it is not a clinical metric, no average volume dataset is used, and country data does not apply to volume.
+- Condom sizing estimates use girth or circumference. Estimated nominal width is approximated as girth in millimeters divided by 2. The result is educational, not a brand recommendation, and product sizing varies by manufacturer.
 
 ## How calculations are estimated
 
@@ -47,6 +48,8 @@ Average Size Calculator is a private educational website for adults that compare
 - https://averagesizecalculator.site/penis-size-percentile-calculator
 - https://averagesizecalculator.site/penis-volume-calculator
   Estimates approximate geometric volume from length and girth using a simplified cylinder formula for educational context.
+- https://averagesizecalculator.site/condom-size-calculator
+  Estimates condom nominal width from girth or circumference and explains snug, regular, large, and wider fit ranges for educational context.
 - https://averagesizecalculator.site/how-penis-size-percentiles-work
 - https://averagesizecalculator.site/penis-size-standard-deviation
 - https://averagesizecalculator.site/average-penis-size
